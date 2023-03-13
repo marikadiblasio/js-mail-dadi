@@ -7,3 +7,9 @@
 .ms-bg-prim {
     background-color: var(--ms-primary);
 }
+.ms-bg-sec {
+    background-color: var(--ms-secundary);
+}
+.ms-text-prim {
+    color: var(--ms-primary);
+}
