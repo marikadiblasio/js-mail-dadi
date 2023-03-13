@@ -1,0 +1,9 @@
+:root {
+    --ms-primary:#F2E3D5;
+    --ms-secundary: #012E40;
+    --ms-tertiary: #024959;
+
+}
+.ms-bg-prim {
+    background-color: var(--ms-primary);
+}
