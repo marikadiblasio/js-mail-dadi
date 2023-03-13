@@ -27,6 +27,7 @@ const invited = [
 ];
 //console.log(invited);
 let accepted = '';
+const start = document.getElementById('start');
 const btnSub = document.querySelector('button');
 btnSub.addEventListener('click', checkList);
 
@@ -51,7 +52,29 @@ function message(uName) {
 let el = document.querySelector('h2');
     if (accepted) {
         el.innerText = `Benvenuto ${uName}`;
+        document.querySelector('form').classList.add('d-none');
+        start.classList.remove('d-none');
     } else {
         el.innerText = `Spiacente, ${uName}, non puoi entrare`;
     }
 }
+//Random numbers
+function letsPlay (){
+const myRnd = getRndNum(1,6);
+const pcRnd = getRndNum(1,6);
+const myNum = document.getElementById('myNum');
+const pcNum = document.getElementById('pcNum');
+const winner = document.getElementById('winner');
+myNum.innerText= `Il tuo numero random è ${myRnd}`;
+pcNum.innerText= `Il numero random del computer è ${pcRnd}`;
+if (myRnd > pcRnd) {
+    winner.innerText=`Hai vinto il gioco`;
+} else if (myRnd < pcRnd) {
+    winner.innerText=`Ritenta, sarai più fortunato`;
+} else {
+    winner.innerText=`Hai pareggiato`;
+}
+document.getElementById('play').classList.remove('d-none');
+}
+
+start.addEventListener('click', letsPlay)
