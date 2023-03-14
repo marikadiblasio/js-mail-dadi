@@ -58,10 +58,10 @@ let el = document.querySelector('h2');
         el.innerText = `Spiacente, ${uName}, non puoi entrare`;
     }
 }
-//Random numbers
+//Random numbers 
 function letsPlay (){
-const myRnd = getRndNum(1,6);
-const pcRnd = getRndNum(1,6);
+const myRnd = getRndNumIncl(1,6);
+const pcRnd = getRndNumIncl(1,6);
 const myNum = document.getElementById('myNum');
 const pcNum = document.getElementById('pcNum');
 const winner = document.getElementById('winner');
@@ -76,5 +76,4 @@ if (myRnd > pcRnd) {
 }
 document.getElementById('play').classList.remove('d-none');
 }
-
-start.addEventListener('click', letsPlay)
+start.addEventListener('click', letsPlay);
